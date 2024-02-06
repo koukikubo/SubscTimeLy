@@ -1,0 +1,34 @@
+<%= render "shared/second-header"%>
+
+<%= form_with model: @user, url: user_session_path, class: '', local: true do |f| %>
+<div class=''>
+  <div class=''>
+    <h1 class=''>
+      会員情報入力
+    </h1>
+  </div>
+  <div class=''>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
+  <div class="">
+    <div class=''>
+      <label class="">メールアドレス</label>
+      <span class="">必須</span>
+    </div>
+    <%= f.email_field :email, class:"", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+  <div class="">
+    <div class=''>
+      <label class="">パスワード</label>
+      <span class="">必須</span>
+    </div>
+    <%= f.password_field :password, class:"", id:"", placeholder:"" %>
+  </div>
+  <div class='login-btn'>
+    <%= f.submit "ログイン" ,class:"" %>
+  </div>
+</div>
+<% end %>
+
+<%= render "shared/second-footer"%>

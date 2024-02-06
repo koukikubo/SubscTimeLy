@@ -23,10 +23,10 @@
 | ------------------ | ---------- | ---------------------------------|
 | user               | references | null: false, foreign_key: true   |
 | subsc_name_id      | integer    | null: false                      |
-| start_date         | timestamps |                                  |           
-| end_date           | timestamps |                                  |
+| start_date         | datetime |                                  |           
+| end_date           | datetime |                                  |
 | description        | text       | null : false                     |
-| price              | string     | null: false                      |
+| price              | integer     | null: false                      |
 
 ### Association
  belongs_to :user
